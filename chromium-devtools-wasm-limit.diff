@@ -1,0 +1,13 @@
+diff --git a/front_end/wasmparser_worker/WasmParserWorker.js b/front_end/wasmparser_worker/WasmParserWorker.js
+index cd4a07eee..79b1742b9 100644
+--- a/front_end/wasmparser_worker/WasmParserWorker.js
++++ b/front_end/wasmparser_worker/WasmParserWorker.js
+@@ -125,7 +125,7 @@ self.onmessage = async function(event) {
+   // memory in the worker (seems to work for the cases that we know about for now),
+   // so we should look into using the chunked disassembly to implement this in a
+   // more reasonable fashion.
+-  const MAX_LINES = 1000 * 1000;
++  const MAX_LINES = 3000 * 1000;
+   if (lines.length > MAX_LINES) {
+     lines[MAX_LINES] = ';; .... text is truncated due to size';
+     lines.splice(MAX_LINES + 1);
